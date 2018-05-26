@@ -192,14 +192,14 @@
                  url = "Ajax/LoginFalse";
                  }*/
                 $.ajax({
-                    url:url,
-                    data:JsonData,
-                    type:"POST",
-                    dataType:'JSON',
-                    beforeSend:function () {
+                    url: url,
+                    data: JsonData,
+                    type: "POST",
+                    dataType: 'JSON',
+                    beforeSend: function () {
 
                     },
-                    success:function (data) {
+                    success: function (data) {
                         setTimeout(function () {
                             $('.authent').show().animate({right: 90}, {
                                 easing: 'easeOutQuint',
@@ -220,20 +220,26 @@
                         //认证完成
                         if (data.state == 200) {
                             //登录成功
-                            if (data.data != 'null') {
-                                layer.msg('登录成功,欢迎回来!');
+                            if (data.data != null) {
                                 /*存储token*/
                                 data = data.data;
-                                setCookie('_token',data.uToken,1);
+                                var unick = '';
+                                if (data.usex == '女') {
+                                    unick = '<span style="color: hotpink;">' + data.unick + '</span>';
+                                }else{
+                                    unick = '<span style="color: #01AAED;">' + data.unick + '</span>';
+                                }
+                                layer.msg('登录成功,' + unick + ',欢迎回来!');
+                                setCookie('_token', data.utoken, 1);
                                 setTimeout(function () {
                                     window.location.href = 'index.html';
-                                },1000);
-                            }else{
+                                }, 1000);
+                            } else {
                                 layer.msg('用户名或密码错误!');
                             }
                             //跳转操作
                         } else {
-                            layer.msg('错误信息:'+data.msg);
+                            layer.msg('错误信息:' + data.msg);
                         }
                     }
                 });

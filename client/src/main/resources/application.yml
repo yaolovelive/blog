@@ -8,10 +8,13 @@ spring:
       restart:
         enabled: true
       context-path: classpath:/*
-  freemarker:
+  thymeleaf:
     suffix: .html
     cache: false
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:1080/eureka
+feign:
+  hystrix:
+    enabled: true

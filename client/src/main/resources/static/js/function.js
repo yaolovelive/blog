@@ -25,3 +25,11 @@ function getCookie(c_name) {
     }
     return "";
 }
+/*删除cookie*/
+function delCookie(c_name) {
+    var exdate = new Date();
+    if(getCookie(c_name) != null || getCookie(c_name) != ''){
+        exdate.setDate(exdate.getDate() - 99999);
+        document.cookie = c_name + '=' + '' + ";expires=" + exdate.toGMTString();
+    }
+}

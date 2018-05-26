@@ -17,14 +17,13 @@ public class UserController {
 
     @PostMapping("/login")
     public ResultMessage login(@RequestParam String uId, @RequestParam String uPassword) {
-        ResultMessage user = userService.login(uId, uPassword);
-        return user;
+        return ResultMessage.ok(userService.login(uId, uPassword));
     }
 
     @GetMapping("/tokenUser/{token}")
     public ResultMessage getUserInfo(@PathVariable("token") String _token) {
 
-        return userService.getUserByToken(_token);
+        return ResultMessage.ok(userService.getUserByToken(_token));
     }
 
 }

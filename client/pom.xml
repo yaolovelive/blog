@@ -26,15 +26,14 @@
 	</properties>
 
 	<dependencies>
-		<!--<dependency>
-			<groupId>com.yy</groupId>
-			<artifactId>service-user</artifactId>
-			<version>1.0</version>
-		</dependency>-->
         <dependency>
             <groupId>com.yy</groupId>
             <artifactId>api</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,10 +46,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
