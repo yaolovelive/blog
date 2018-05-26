@@ -11,6 +11,7 @@ spring:
   thymeleaf:
     suffix: .html
     cache: false
+    mode: XHTML
 eureka:
   client:
     service-url:
