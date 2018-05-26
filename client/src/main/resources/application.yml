@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: client
+  devtools:
+    remote:
+      restart:
+        enabled: true
+      context-path: classpath:/*
+  freemarker:
+    suffix: .html
+    cache: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1080/eureka

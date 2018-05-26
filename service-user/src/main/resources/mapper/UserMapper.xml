@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yy.mapper.UserMapper">
+
+    <resultMap id="user" type="UserBean">
+        <id column="u_id" property="uId" jdbcType="VARCHAR" javaType="string"></id>
+        <!--<result column="u_password" property="uPassword" jdbcType="VARCHAR" javaType="string"></result>-->
+        <result column="u_nick" property="uNick" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_age" property="uAge" jdbcType="INTEGER" javaType="_integer"></result>
+        <result column="u_sex" property="uSex" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_email" property="uEmail" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_phone" property="uPhone" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_personality_signature" property="uPersonalitySignature" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_last_login_date" property="uLastLoginDate" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_last_login_ip" property="uLastLoginIp" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_header" property="uHeader" jdbcType="VARCHAR" javaType="string"></result>
+        <result column="u_token" property="uToken" jdbcType="VARCHAR" javaType="string"></result>
+    </resultMap>
+
+    <select id="getUserByBean" parameterType="UserBean" resultMap="user">
+        SELECT * FROM `user`
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="uId != null and uId != ''">
+                AND u_id = #{uId}
+            </if>
+            <if test="uPassword != null and uPassword != ''">
+                AND u_password = #{uPassword}
+            </if>
+            <if test="uNick != null and uNick != ''">
+                AND u_nick LIKE CONCAT('%',#{uNick},'%')
+            </if>
+            <if test="uToken != null and uToken != ''">
+              AND u_token = #{uToken}
+            </if>
+        </trim>
+    </select>
+
+    <update id="updateUser" parameterType="UserBean">
+        UPDATE `user`
+        <trim suffixOverrides=",">
+            <set>
+                <if test="uToken != null and uToken != ''">u_token=#{uToken},</if>
+            </set>
+        </trim>
+        WHERE u_id = #{uId}
+    </update>
+</mapper>
