@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
         userBean.setUPassword(uPassword);
 
         List<UserBean> users = userMapper.getUserByBean(userBean);
-        if(users == null || users.size() == 0){
+        if (users == null || users.size() == 0) {
             return null;
         }
         String token = UUID.randomUUID().toString();
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
         UserBean userBean = new UserBean();
         userBean.setUToken(uToken);
         List<UserBean> users = userMapper.getUserByBean(userBean);
-        if(users == null || users.size() == 0){
+        if (users == null || users.size() == 0) {
             return null;
         }
         return users.get(0);
