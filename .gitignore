@@ -1,5 +1,6 @@
-/.ide
-/.ide/*
+/.idea
+/.idea/*
 /target
-.ide
+.idea
 */target
+*/test
