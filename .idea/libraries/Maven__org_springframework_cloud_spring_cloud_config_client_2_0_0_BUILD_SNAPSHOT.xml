@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.cloud:spring-cloud-config-client:2.0.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180526.000126-2899.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180606.060113-2995.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180526.000126-2899-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180606.060113-2995-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180526.000126-2899-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-client/2.0.0.BUILD-SNAPSHOT/spring-cloud-config-client-2.0.0.BUILD-20180606.060113-2995-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
